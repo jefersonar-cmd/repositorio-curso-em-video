@@ -2,10 +2,13 @@
 # e peca para o usuário tentar descobrir qual foi o número escolhido pelo computador
 # O programa deverá escrever na tela se o usuário venceu ou perdeu
 import random
+from time import sleep
 
 aleatorio = random.randint(0, 5)
 print('{:=^50}'.format('Utilize números de 0 a 5'))
 usr = int(input('Tente adivinhar o numero sorteado: '))
+print('PENSANDO...')
+sleep(3)
 if usr == aleatorio:
     print('Meus Parabéns, voce acertou!!')
 else:
