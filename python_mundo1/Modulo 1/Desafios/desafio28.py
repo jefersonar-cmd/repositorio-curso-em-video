@@ -7,7 +7,7 @@ from time import sleep
 aleatorio = random.randint(0, 5)
 print('{:=^50}'.format('Utilize números de 0 a 5'))
 usr = int(input('Tente adivinhar o numero sorteado: '))
-print('PENSANDO...')
+print('\033[1:30:43mPENSANDO...\033[m')
 sleep(3)
 if usr == aleatorio:
     print('Meus Parabéns, voce acertou!!')
