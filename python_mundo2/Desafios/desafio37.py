@@ -9,8 +9,10 @@ print('=-'*20)
 user = int(input('informe um numero qualquer: '))
 opcao = int(input('Para qual base deseja converter?\n1- Binário\n2- Octal\n3- Hexadecimal\nEscolha: '))
 if opcao == 1:
-    print('{0:08b}'.format(user))
+    print(bin(user)[2:])
 elif opcao == 2:
-    print(oct(user))
+    print(oct(user)[2:])
 elif opcao == 3:
-    print(hex(user))
+    print(hex(user)[2:])
+else:
+    print('Opcao invalida')
