@@ -16,4 +16,4 @@ while user != 'N':
     array.append(numero)
     print('Deseja Continuar?\n[S/N]')
     user = str(input('Escolha: ')).upper()
-print('O maior numero informado foi {}\nO menor numero informado foi {}\nA media entre todos os numeros foi de {}'.format(max(array, key=int), min(array, key=int), total/cont))
+print('O maior numero informado foi {}\nO menor numero informado foi {}\nA media entre todos os numeros foi de {}'.format(max(array, key=int), min(array, key=int), int(total/cont)))
