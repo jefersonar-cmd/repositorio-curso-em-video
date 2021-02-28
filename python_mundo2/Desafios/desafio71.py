@@ -7,18 +7,40 @@
 print('-='*20)
 print('Caixa Eletronico')
 print('=-'*20)
-sacar = int(input('Qual valor a ser sacado?\nR$'))
-cont = 0
-total = 0
-resto = 0
+valor = int(input('Valor a ser sacado (Sem os Centavos)\nR$'))
+cedula = 50
+cinquenta = vinte = dez = um = 0
 while True:
-    cont += 1
-    if sacar < 50:
-        resto = sacar
-        break
-    else:
-        cont += 1
-        total += 50
-        sacar -= 50
-        continue
-print(f'Vai ser retirado {cont} notas de 50, totalizando {total}, restando apenas {resto}')
+    while valor > 50:
+        if valor < 50:
+            break
+        else:
+            cinquenta += 1
+            valor -= 50
+            continue
+    while valor > 20:
+        if valor < 20:
+            break
+        else:
+            vinte += 1
+            valor -= 20
+            continue
+    while valor > 10:
+        if valor < 10:
+            break
+        else:
+            dez += 1
+            valor -= 10
+            continue
+    while valor > 1:
+        if valor < 1:
+            break
+        else:
+            um += 1
+            valor -= 1
+            continue
+    break
+print(f'{cinquenta} notas de Cinquenta')
+print(f'{vinte} notas de Vinte')
+print(f'{dez} notas de Dez')
+print(f'{um} notas de Um')
