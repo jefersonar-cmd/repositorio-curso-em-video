@@ -6,26 +6,36 @@ listaGlobal = [
 ]
 for n in range(0, 7):
     numero = int(input('Digite um número: '))
-    if n == 0 or numero > listaGlobal[0][-1] or numero > listaGlobal[1][-1]:
+    if n == 0 or len(listaGlobal[0]) == 0 or len(listaGlobal[1]) == 0:
         if numero % 2 == 0:
             listaGlobal[0].append(numero)
+            print(f'Positivo: {len(listaGlobal[0])}')
         else:
             listaGlobal[1].append(numero)
+            print(f'Negativo: {len(listaGlobal[1])}')
     else:
         if numero % 2 == 0:
             pos = 0
             while pos < len(listaGlobal[0]):
                 if numero <= listaGlobal[0][pos]:
-                    listaGlobal[0].insert(pos, numero)
-                    break
+                    if numero == listaGlobal[0][pos]:
+                        print('Numero repetido')
+                    else:
+                        listaGlobal[0].insert(pos, numero)
+                        print(f'Positivo: {len(listaGlobal[0])}')
+                        break
                 else:
                     pos += 1
         else:
             pos = 0
             while pos < len(listaGlobal[1]):
                 if numero <= listaGlobal[1][pos]:
-                    listaGlobal[1].insert(pos, numero)
-                    break
+                    if numero == listaGlobal[1][pos]:
+                        print('Numero repetido')
+                    else:
+                        listaGlobal[1].insert(pos, numero)
+                        print(f'Negativo: {len(listaGlobal[1])}')
+                        break
                 else:
                     pos += 1
 
