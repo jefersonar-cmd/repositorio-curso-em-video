@@ -6,17 +6,13 @@ matriz = [
     [],
     []
 ]
-
-linha = 0
-qtd = 0
-while True:
-    numero = int(input('Digite um número: '))
-    matriz[linha].append(numero)
-    if len(matriz[linha]) == 3:
-        linha += 1
-        if linha == 3:
-            break
-
-print('Matriz 3x3')
 for l in range(0, 3):
-    print(matriz[l])
+    for c in range(0, 3):
+        matriz[l].append(int(input(f'Digite um valor para [{l}, {c}]: ')))
+print('-=' * 30)
+for l in range(0, 3):
+    for c in range(0, 3):
+        print(f'[{matriz[l][c]:^5}]', end='')
+    print()
+print('-=' * 30)
+print('Fim do programa! Volte sempre!')

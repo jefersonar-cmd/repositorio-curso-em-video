@@ -1,6 +1,7 @@
 # Faça um programa que ajude um jogador da MEGA SENA a criar PALPITES. O programa vai perguntar
 # QUANTOS JOGOS serão gerados e vai sortear 6 NUMEROS ENTRE 1 E 60 para cada jogo, cadastrando tudo em uma LISTA COMPOSTA.
 from random import randint
+from time import sleep
 print('Sorteio da Mega Senha')
 lista = []
 composta = []
@@ -16,6 +17,7 @@ for q in range(0, qtd):
     lista.clear()
 print(f'\nOs {qtd} Jogos foram:')
 for i in composta:
-    print(f'Jogo {i}')
+    print(f'Jogo {i}'),
+    sleep(1)
 print('\nFim do Programa')
 # Fim do Programa6
