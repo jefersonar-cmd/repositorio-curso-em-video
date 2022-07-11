@@ -8,4 +8,14 @@ numero = 0
 qtd = int(input('Informe a Quantidade de Jogos para Mega Sena: '))
 for q in range(0, qtd):
     for n in range(0, 6):
-
+        numero = randint(1, 60)
+        if numero not in lista:
+            lista.append(numero)
+    lista.sort()
+    composta.append(lista[:])
+    lista.clear()
+print(f'\nOs {qtd} Jogos foram:')
+for i in composta:
+    print(f'Jogo {i}')
+print('\nFim do Programa')
+# Fim do Programa6
