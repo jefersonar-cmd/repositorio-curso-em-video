@@ -38,7 +38,7 @@ while True:
         print(f"ID: {idper}\nNome: {jogadores[idper]['nome']}\nPartidas: {jogadores[idper]['partidas']}")
         gols = jogadores[idper]['gols']
         for g in range(0, len(gols)):
-            print(f"    Gols da {g+1}ª Partida: {gols[g]}")
+            print(f"   - Gols da {g+1}ª Partida: {gols[g]}")
         print(f"Total de Gols no Campeonato: {jogadores[idper]['gtotal']}")
         continue
 
