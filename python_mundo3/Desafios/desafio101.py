@@ -9,11 +9,12 @@ def voto(ano):
     atual = datetime.now().year
     idade = atual - ano
     if idade >= 16 and idade <= 17 or idade >= 70:
-        print(f'O cidadão tem {idade} e é OPCIONAL VOTAR')
+        return f'O cidadão tem {idade} e é OPCIONAL VOTAR'
     elif idade >= 18 and idade < 70:
-        print(f'O cidadão tem {idade} e é OBRIGATÓRIO VOTAR')
+        return f'O cidadão tem {idade} e é OBRIGATÓRIO VOTAR'
     elif idade < 16:
-        print(f'O cidadão tem {idade} e é NEGADO VOTAR')
+        return f'O cidadão tem {idade} e é NEGADO VOTAR'
 
 
-voto(int(input('Digite o ano de nascimento: ')))
+nasc = voto(int(input('Digite o ano de nascimento: ')))
+print(nasc)
