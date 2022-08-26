@@ -4,6 +4,13 @@ def ficha(nome='<DESCONHECIDO>', gols=0):
     print(f'O jogador {nome} fez {gols} gols')
 
 
-ficha('Estudante', 13)
-ficha(gols=2)
-ficha()
+nome = str(input('Digite o nome do jogador: '))
+golacos = str(input('Digite a qtd de gols: '))
+if golacos.isnumeric():
+    g = int(golacos)
+else:
+    g = 0
+if nome.strip() == '':
+    ficha(gols=g)
+else:
+    ficha(nome, golacos)

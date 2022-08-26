@@ -2,6 +2,7 @@
 def maior(*num):
     print('-='*20)
     print('Analizando os valores passados...')
+    print(num)
     for valor in num:
         print(valor, end=' ')
     if len(num) == 0:

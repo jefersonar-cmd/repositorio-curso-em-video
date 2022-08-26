@@ -19,7 +19,7 @@ while True:
         break
     else:
         continue
-print('Verificando Dados...')
+print('Verificando dados...')
 sleep(2)
 print('-='*30)
 print(f'Pessoas Cadastradas: {len(lista)}')
